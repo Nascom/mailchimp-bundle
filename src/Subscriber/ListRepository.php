@@ -3,7 +3,6 @@
 namespace Welp\MailchimpBundle\Subscriber;
 
 use DrewM\MailChimp\MailChimp;
-use phpDocumentor\Reflection\Types\Void_;
 use Welp\MailchimpBundle\Exception\MailchimpException;
 
 /**
@@ -15,13 +14,13 @@ class ListRepository
      * Numbers of subscribers per batch
      * @var int
      */
-    const SUBSCRIBER_BATCH_SIZE = 300;
+    private const SUBSCRIBER_BATCH_SIZE = 300;
 
     /**
      * MailChimp count limit for result set
      * @var int
      */
-    const MAILCHIMP_DEFAULT_COUNT_LIMIT = 10;
+    private const MAILCHIMP_DEFAULT_COUNT_LIMIT = 10;
 
     /**
      * MailChimp Object

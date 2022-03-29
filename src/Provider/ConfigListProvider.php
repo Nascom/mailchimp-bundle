@@ -22,7 +22,7 @@ class ConfigListProvider implements ListProviderInterface
      */
     public function getLists()
     {
-        if (sizeof($this->lists) == 0) {
+        if (count($this->lists) === 0) {
             throw new \RuntimeException("No Mailchimp list has been defined. Check the your config.yml file based on MailchimpBundle's README.md");
         }
         $lists = array();
@@ -41,7 +41,7 @@ class ConfigListProvider implements ListProviderInterface
     {
         foreach ($this->lists as $id => $listParameters) 
         {
-            if($id == $listId)
+            if ($id == $listId)
             {
                 return $this->createList($id, $listParameters);
             }
