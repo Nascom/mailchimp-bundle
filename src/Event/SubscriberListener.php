@@ -3,7 +3,6 @@
 namespace Welp\MailchimpBundle\Event;
 
 use Welp\MailchimpBundle\Subscriber\ListRepository;
-use Welp\MailchimpBundle\Event\SubscriberEvent;
 
 /**
  * Listener for subscriber unit synchronization
